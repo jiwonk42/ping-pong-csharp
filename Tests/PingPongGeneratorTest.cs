@@ -22,6 +22,22 @@ namespace PingPongGenerator
       Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(3));
     }
 
+    [Fact]
+    public void PingPongGenerator_ForUserInput5_pong()
+    {
+      PingPong testPingPongGenerator = new PingPong();
+      List<string> testPingPongList = new List<string> {"1", "2", "ping", "4", "pong"};
+      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(5));
+    }
+
+    [Fact]
+    public void PingPongGenerator_ForUserInput15_pingPong()
+    {
+      PingPong testPingPongGenerator = new PingPong();
+      List<string> testPingPongList = new List<string> {"1", "2", "ping", "4", "pong", "ping", "7", "8", "ping", "pong", "11", "ping", "13", "14", "ping-pong"};
+      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(15));
+    }
+
     // public void Dispose()
     // {
     //   PingPong.DeleteAll();
