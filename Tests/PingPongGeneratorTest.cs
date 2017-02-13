@@ -11,7 +11,7 @@ namespace PingPongGenerator
     {
       PingPong testPingPongGenerator = new PingPong();
       List<string> testPingPongList = new List<string> {"1"};
-      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(1));
+      Assert.Equal(testPingPongList, testPingPongGenerator.CreatePingPong(1));
     }
 
     [Fact]
@@ -19,7 +19,7 @@ namespace PingPongGenerator
     {
       PingPong testPingPongGenerator = new PingPong();
       List<string> testPingPongList = new List<string> {"1", "2", "ping"};
-      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(3));
+      Assert.Equal(testPingPongList, testPingPongGenerator.CreatePingPong(3));
     }
 
     [Fact]
@@ -27,7 +27,7 @@ namespace PingPongGenerator
     {
       PingPong testPingPongGenerator = new PingPong();
       List<string> testPingPongList = new List<string> {"1", "2", "ping", "4", "pong"};
-      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(5));
+      Assert.Equal(testPingPongList, testPingPongGenerator.CreatePingPong(5));
     }
 
     [Fact]
@@ -35,12 +35,7 @@ namespace PingPongGenerator
     {
       PingPong testPingPongGenerator = new PingPong();
       List<string> testPingPongList = new List<string> {"1", "2", "ping", "4", "pong", "ping", "7", "8", "ping", "pong", "11", "ping", "13", "14", "ping-pong"};
-      Assert.Equal(testPingPongList, testPingPongGenerator.PingPongGenerator(15));
+      Assert.Equal(testPingPongList, testPingPongGenerator.CreatePingPong(15));
     }
-
-    // public void Dispose()
-    // {
-    //   PingPong.DeleteAll();
-    // }
   }
 }

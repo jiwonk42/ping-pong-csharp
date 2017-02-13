@@ -5,7 +5,7 @@ namespace PingPongGenerator
 {
   public class PingPong
   {
-    public List<string> PingPongGenerator(int number)
+    public List<string> CreatePingPong(int number)
     {
       List<string> pingPongList = new List<string> {};
 
@@ -30,10 +30,5 @@ namespace PingPongGenerator
       }
       return pingPongList;
     }
-
-    // public static void DeleteAll()
-    // {
-    //
-    // }
   }
 }
